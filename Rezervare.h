@@ -1,7 +1,7 @@
 #ifndef OOP_REZERVARE_H
 #define OOP_REZERVARE_H
 
-#include <iostream>
+#include <ostream>
 #include "Film.h"
 #include "Client.h"
 
