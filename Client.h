@@ -1,7 +1,7 @@
 #ifndef OOP_CLIENT_H
 #define OOP_CLIENT_H
 
-#include <iostream>
+#include <ostream>
 
 class Client{
     const int id;
