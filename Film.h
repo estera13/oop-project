@@ -1,7 +1,7 @@
 #ifndef OOP_FILM_H
 #define OOP_FILM_H
 
-#include <iostream>
+#include <ostream>
 
 class Film{
     const int id;
