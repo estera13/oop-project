@@ -18,24 +18,6 @@ public:
         return os;
     }
 
-    const std::string &getNume()
-    {
-        return nume;
-    }
-    void setNume(const std::string &nume0)
-    {
-        nume = nume0;
-    }
-
-    int getVarsta()
-    {
-        return varsta;
-    }
-    void setVarsta(int varsta0)
-    {
-        varsta=varsta0;
-    }
-
 };
 
 #endif //OOP_CLIENT_H
