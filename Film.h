@@ -17,12 +17,12 @@ public:
     ~Film() {};
     Film(const Film &copie);
 
-    friend std::ostream &operator<<(std::ostream &os, const Film &film) {
+    friend std::ostream &operator<<(std::ostream &os, const Film &film)
+    {
         os << "id: " << film.id << " nume: " << film.nume << " gen: " << film.gen << " ora: "
            << film.ora << " durata: " << film.durata << " minute" << " pret: " << film.pret<< " lei" <<"\n";
         return os;
     }
-
     const std::string &getNume()
     {
         return nume;
@@ -67,8 +67,8 @@ public:
     {
         pret=pret0;
     }
-
 };
 
 
 #endif //OOP_FILM_H
+
