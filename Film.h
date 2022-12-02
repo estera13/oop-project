@@ -4,23 +4,23 @@
 #include <ostream>
 
 class Film{
-    const int id;
     std::string nume;
     std::string gen;
     std::string ora;
     int durata;
     float pret;
+    std::string tehnologie;
+    int pegi;
 public:
 
     Film();
-    Film(const int id, const std::string &nume, const std::string &gen, const std::string &ora, int durata, float pret) : id(id), nume(nume), gen(gen), ora(ora), durata(durata), pret(pret) {}
+    Film(const std::string &nume, const std::string &gen, const std::string &ora, int durata, float pret, const std::string &tehnologie, int pegi) : nume(nume), gen(gen), ora(ora), durata(durata), pret(pret) ,tehnologie(tehnologie), pegi(pegi) {};
     ~Film() {};
-    Film(const Film &copie);
 
     friend std::ostream &operator<<(std::ostream &os, const Film &film)
     {
-        os << "id: " << film.id << " nume: " << film.nume << " gen: " << film.gen << " ora: "
-           << film.ora << " durata: " << film.durata << " minute" << " pret: " << film.pret<< " lei" <<"\n";
+        os << " nume: " << film.nume << " gen: " << film.gen << " ora: "
+           << film.ora << " durata: " << film.durata << " minute" << " pret: " << film.pret<< " lei " << "tehnologie: " << film.tehnologie <<"\n";
         return os;
     }
     const std::string &getNume()
@@ -67,8 +67,15 @@ public:
     {
         pret=pret0;
     }
+    const std::string &getTehnologie()
+    {
+        return tehnologie;
+    }
+    int getPegi()
+    {
+        return pegi;
+    }
 };
 
 
 #endif //OOP_FILM_H
-

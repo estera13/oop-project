@@ -4,7 +4,6 @@ using namespace std;
 
 Film::Film(const Film &copie)
 {
-    id=copie.id;
     nume=copie.nume;
     gen=copie.gen;
     ora=copie.ora;
@@ -13,7 +12,6 @@ Film::Film(const Film &copie)
 }
 
 Film&Film::operator=(const Film& other){
-    id = other.id;
     nume = other.nume;
     gen = other.gen;
     ora = other.ora;
@@ -22,3 +20,5 @@ Film&Film::operator=(const Film& other){
     return *this;
 }
 Film::~Film(){}
+
+

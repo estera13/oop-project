@@ -4,17 +4,17 @@
 #include <ostream>
 
 class Client{
-    const int id;
     std::string nume;
+    std::string prenume;
     int varsta;
 
 public:
 
     Client();
-    Client(const int id, const std::string &nume, int varsta) : id(id), nume(nume), varsta(varsta) {};
+    Client(const std::string &nume, const std::string &prenume, int varsta) : nume(nume), prenume(prenume), varsta(varsta) {};
     ~Client() {};
     friend std::ostream &operator<<(std::ostream &os, const Client &client) {
-        os << "id: " << client.id << " nume: " << client.nume << " varsta: " << client.varsta << " ani " <<"\n";
+        os << " nume: " << client.nume << " varsta: " << client.varsta << " ani " <<"\n";
         return os;
     }
      const std::string &getNume()
