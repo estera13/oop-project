@@ -20,7 +20,7 @@ public:
     friend std::ostream &operator<<(std::ostream &os, const Film &film)
     {
         os << " nume: " << film.nume << " gen: " << film.gen << " ora: "
-           << film.ora << " durata: " << film.durata << " minute" << " pret: " << film.pret<< " lei " << "tehnologie: " << film.tehnologie <<"\n";
+           << film.ora << " durata: " << film.durata << " minute" << " pret: " << film.pret<< " lei " << " tehnologie: " << film.tehnologie << " PEGI: " << film.pegi << "\n";
         return os;
     }
     const std::string &getNume()
