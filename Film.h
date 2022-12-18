@@ -18,13 +18,9 @@ public:
                const std::string &tehnologie, int pegi) : nume(nume), gen(gen), ora(ora), durata(durata), pret(pret),
                                                           tehnologie(tehnologie), pegi(pegi) {}
 
-    Film(const Film &copie) {
-        nume = copie.nume;
-        gen = copie.gen;
-        ora = copie.ora;
+    Film(const Film &copie) :nume(copie.nume), gen(copie.gen), ora(copie.ora), tehnologie(copie.tehnologie) {
         durata = copie.durata;
         pret = copie.pret;
-        tehnologie = copie.tehnologie;
         pegi = copie.pegi;
     }
 
