@@ -15,7 +15,7 @@ public:
 
     Film();
     Film(const std::string &nume, const std::string &gen, const std::string &ora, int durata, float pret, const std::string &tehnologie, int pegi) : nume(nume), gen(gen), ora(ora), durata(durata), pret(pret) ,tehnologie(tehnologie), pegi(pegi) {};
-    ~Film() {};
+    ~Film();
     Film(const Film &);
     Film& operator=(const Film&);
     friend std::ostream &operator<<(std::ostream &os, const Film &film)
