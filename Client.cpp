@@ -1,11 +1,7 @@
 #include "Client.h"
-#include "Exceptii.h"
 #include <iostream>
 
-Client::Client(const std::string &nume, const std::string &prenume, int varsta) : nume(nume), prenume(prenume), varsta(varsta) {
-
-    if(varsta<0) throw eroare_varsta();
-}
+Client::Client(const std::string &nume, const std::string &prenume, int varsta) : nume(nume), prenume(prenume), varsta(varsta) 
 
 Client::Client(const Client &copie)
 {
