@@ -80,6 +80,6 @@ public:
 
     void setNumar_rand(int numar_rand0) {
         numar_rand = numar_rand0;
-    };
+    }
 };
 #endif //OOP_REZERVARE_H
