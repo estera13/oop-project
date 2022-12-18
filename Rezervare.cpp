@@ -1,14 +1,8 @@
 #include "Rezervare.h"
-#include "Exceptii.h"
 
 
 Rezervare::Rezervare( int &numar_loc,  int &numar_rand, float pret, Client client, Film film) : numar_loc(numar_loc), numar_rand(numar_rand), pret(pret), client(client), film(film)
-{
-    if(film.getPegi()==18 && client.getVarsta()<film.getPegi())
-    {
-        throw(eroare_varstaPegi());
-    }
-}
+
 
 Rezervare&Rezervare::operator=(const Rezervare& other){
     numar_loc=other.numar_loc;
