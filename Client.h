@@ -12,9 +12,7 @@ public:
 
     Client();
     Client(const std::string &nume, const std::string &prenume, int varsta) : nume(nume), prenume(prenume), varsta(varsta) {};
-    ~Client();
-    Client(const Client &);
-    Client& operator=(const Client&);
+    ~Client() {};
     friend std::ostream &operator<<(std::ostream &os, const Client &client) {
         os << " nume: " << client.nume << " varsta: " << client.varsta << " ani " <<"\n";
         return os;
