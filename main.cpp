@@ -37,7 +37,7 @@ int main()
         try {clienti.push_back(Client(nume, prenume ,varsta));
             cnt++;
             std::cout<<"Alegeti un film: \n";
-            int i;
+            unsigned long int i;
             for(i=0;i<filme.size();i++)
                 std::cout<<i<<": "<<filme[i]<<'\n';
             std::cin>>i;
