@@ -17,9 +17,7 @@ public:
         if (varsta < 0) throw eroare_varsta();
     }
 
-    Client(const Client &copie) {
-        nume = copie.nume;
-        prenume = copie.prenume;
+    Client(const Client &copie) : nume(copie.nume), prenume(copie.prenume) {
         varsta = copie.varsta;
     }
 
