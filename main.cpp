@@ -22,6 +22,8 @@ int main()
     clienti.push_back(Client("Popescu", "Sabina", 11));
     bilete.push_back(Rezervare(0,2,3,{"Ionescu", "Andreea" ,16},{"Hereditary","Horror","22:00",127,22.00,"2D",18}));
     bilete.push_back(Rezervare(0,2,3,{"Popescu", "Sabina", 11},{"Abominable","Animatie","13:00",97,22.00,"3D",3}));
+
+    bilete[0].restrictieVarsta();
     bilete[1].reducere();
     bilete[1].ochelari3D();
 
