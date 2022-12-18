@@ -44,7 +44,7 @@ int main()
             try{
                 int seat = 1+ (rand() % 200);
                 int row = 1+ (rand() % 10);
-                Rezervare Bilet(random, random1,0,clienti[cnt],filme[i]);
+                Rezervare Bilet(seat, row,0,clienti[cnt],filme[i]);
                 Bilet.ochelari3D();
                 Bilet.reducere();
                 std::cout<<Bilet;
