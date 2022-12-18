@@ -34,7 +34,7 @@ public:
         os << "nume: " << client.nume << " prenume: " << client.prenume << " varsta: " << client.varsta << " ani "
            << "\n";
         return os;
-    };
+    }
 
     int getVarsta() {
         return varsta;
