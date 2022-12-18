@@ -42,8 +42,8 @@ int main()
                 std::cout<<i<<": "<<filme[i]<<'\n';
             std::cin>>i;
             try{
-                int random = 1+ (rand() % 200);
-                int random1 = 1+ (rand() % 10);
+                int seat = 1+ (rand() % 200);
+                int row = 1+ (rand() % 10);
                 Rezervare Bilet(random, random1,0,clienti[cnt],filme[i]);
                 Bilet.ochelari3D();
                 Bilet.reducere();
