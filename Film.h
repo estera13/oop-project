@@ -46,7 +46,7 @@ public:
            << " minute" << " pret: " << film.pret << " lei " << "tehnologie: " << film.tehnologie << " PEGI: "
            << film.pegi << "\n";
         return os;
-    };
+    }
 
     const std::string &getNume() {
         return nume;
