@@ -1,4 +1,3 @@
-
 #include "Client.h"
 #include "Exceptii.h"
 #include <iostream>
@@ -50,6 +49,4 @@ void Client::setNume(const std::string &nume0) {
 const std::string &Client::getNume() {
     return nume;
 }
-
-
 

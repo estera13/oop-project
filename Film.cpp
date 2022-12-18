@@ -1,4 +1,3 @@
-
 #include "Film.h"
 
 Film::Film(const std::string &nume, const std::string &gen, const std::string &ora, int durata, float pret, const std::string &tehnologie, int pegi): nume(nume), gen(gen), ora(ora), durata(durata), pret(pret) ,tehnologie(tehnologie), pegi(pegi) {}
@@ -83,5 +82,4 @@ int Film::getPegi() {
 void Film::setPegi(int pegi0) {
     pegi=pegi0;
 }
-
 

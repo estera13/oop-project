@@ -1,4 +1,3 @@
-
 #ifndef OOP_REZERVARE_H
 #define OOP_REZERVARE_H
 
