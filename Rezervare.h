@@ -1,12 +1,11 @@
 #ifndef OOP_REZERVARE_H
 #define OOP_REZERVARE_H
 
-#include <ostream>
+#include <iostream>
 #include "Film.h"
 #include "Client.h"
 
 class Rezervare{
-    const int id;
     int numar_loc;
     int numar_rand;
     Client client;
@@ -14,13 +13,12 @@ class Rezervare{
 public:
 
     Rezervare();
-    Rezervare(const int id, const int &numar_loc, const int &numar_rand, const Client &client, const Film &film) : id(id), numar_loc(numar_loc), numar_rand(numar_rand), client(client),film (film) {};
-    ~Rezervare() {};
-    Rezervare(const Rezervare &);
+    Rezervare( const int &numar_loc, const int &numar_rand, const Client &client, const Film &film) : numar_loc(numar_loc), numar_rand(numar_rand), client(client),film (film) {};
+    ~Rezervare();
     Rezervare& operator=(const Rezervare&);
 
     friend std::ostream &operator<<(std::ostream &os, const Rezervare &Rezervare) {
-        os << "id: " << Rezervare.id << " numar_loc: " << Rezervare.numar_loc << " numar_rand: " << Rezervare.numar_rand
+        os << " numar_loc: " << Rezervare.numar_loc << " numar_rand: " << Rezervare.numar_rand
         << " client: " << Rezervare.client << " film: " << Rezervare.film <<"\n";
         return os;
     }
