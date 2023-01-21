@@ -40,54 +40,54 @@ const std::string &Film::getNume() const {
     return nume;
 }
 
-void Film::setNume(const std::string &nume) {
-    this->nume = nume;
+void Film::setNume(const std::string &Nume) {
+    this->nume = Nume;
 }
 
 const std::string &Film::getGen() const {
     return gen;
 }
 
-void Film::setGen(const std::string &gen) {
-    this->gen = gen;
+void Film::setGen(const std::string &Gen) {
+    this->gen = Gen;
 }
 
 const std::string &Film::getOra() const {
     return ora;
 }
 
-void Film::setOra(const std::string &ora) {
-    this->ora = ora;
+void Film::setOra(const std::string &Ora) {
+    this->ora = Ora;
 }
 
 int Film::getDurata() const {
     return durata;
 }
 
-void Film::setDurata(int durata) {
-    this->durata = durata;
+void Film::setDurata(int Durata) {
+    this->durata = Durata;
 }
 
 float Film::getPret() const {
     return pret;
 }
 
-void Film::setPret(float pret) {
-    this->pret = pret;
+void Film::setPret(float Pret) {
+    this->pret = Pret;
 }
 
 const std::string &Film::getTehnologie() const {
     return tehnologie;
 }
 
-void Film::setTehnologie(const std::string &tehnologie) {
-    this->tehnologie = tehnologie;
+void Film::setTehnologie(const std::string &Tehnologie) {
+    this->tehnologie = Tehnologie;
 }
 
 int Film::getPegi() const {
     return pegi;
 }
 
-void Film::setPegi(int pegi) {
-    this->pegi = pegi;
+void Film::setPegi(int Pegi) {
+    this->pegi = Pegi;
 }
