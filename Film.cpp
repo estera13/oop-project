@@ -40,17 +40,11 @@ float Film::getPret() const {
     return pret;
 }
 
-void Film::setPret(float Pret) {
-    this->pret = Pret;
-}
 
 const std::string &Film::getTehnologie() const {
     return tehnologie;
 }
 
-void Film::setTehnologie(const std::string &Tehnologie) {
-    this->tehnologie = Tehnologie;
-}
 
 int Film::getPegi() const {
     return pegi;
