@@ -14,7 +14,7 @@ public:
            const std::string &tehnologie, int pegi, const std::string &actor_principal);
     ~Comedie();
 
-     void afisare(std::ostream& os) const;
+     void afisare(std::ostream& os) const  override;
 
     Comedie &operator=(const Comedie &other);
 
