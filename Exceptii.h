@@ -6,20 +6,20 @@
 #include <stdexcept>
 #include <string>
 
-class eroare : public std::runtime_error {
+class eroare_baza : public std::runtime_error {
 public:
-   explicit eroare(const std::string &arg) : runtime_error("Eroare: " + arg) {};
+   explicit eroare_baza(const std::string &arg) : runtime_error("Eroare: " + arg) {};
 };
 
 
-class eroare_varstaPegi : public eroare {
+class eroare_varstaPegi : public eroare_baza {
 public:
-   explicit eroare_varstaPegi() : eroare(" Filmul nu este recomandat persoanelor sub 18 ani!") {};
+   explicit eroare_varstaPegi() : eroare_baza(" Filmul nu este recomandat persoanelor sub 18 ani!") {};
 };
 
-class eroare_varsta : public eroare {
+class eroare_varsta : public eroare_baza {
 public:
-    explicit eroare_varsta() : eroare(" Varsta nu poate fi negativa!") {};
+    explicit eroare_varsta() : eroare_baza(" Varsta nu poate fi negativa!") {};
 };
 
 
