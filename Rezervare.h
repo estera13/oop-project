@@ -5,6 +5,9 @@
 #include <ostream>
 #include "Film.h"
 #include "Client.h"
+#include "Comedie.h"
+#include "Horror.h"
+#include "Clasic.h"
 #include "Exceptii.h"
 
 class Rezervare {
@@ -13,73 +16,39 @@ class Rezervare {
     float pret;
     Client client;
     Film film;
+
 public:
 
-    Rezervare(int &numar_loc, int &numar_rand, float pret, Client client, Film film) : numar_loc(numar_loc),
-                                                                                                  numar_rand(
-                                                                                                          numar_rand),
-                                                                                                  pret(pret),
-                                                                                                  client(client),
-                                                                                                  film(film) {
-        if (film.getPegi() == 18 && client.getVarsta() < film.getPegi()) {
-            throw (eroare_varstaPegi());
-        }
-    }
+    Rezervare(int &numar_loc, int &numar_rand, float pret, Client client, Film film);
 
-    Rezervare &operator=(const Rezervare &other) {
-        numar_loc = other.numar_loc;
-        numar_rand = other.numar_rand;
-        pret = other.pret;
-        client = other.client;
-        film = other.film;
-        return *this;
-    }
+    Rezervare &operator=(const Rezervare &other);
 
-    ~Rezervare() {}
+    virtual ~Rezervare();
 
-    friend std::ostream &operator<<(std::ostream &os, const Rezervare &Rezervare) {
-        os << " numar_loc: " << Rezervare.numar_loc << " numar_rand: " << Rezervare.numar_rand << " pret: "
-           << Rezervare.pret << " lei\n"
-           << " Date client: " << Rezervare.client << " Date film: " << Rezervare.film << "\n";
-        return os;
-    }
+    friend std::ostream &operator<<(std::ostream &os, const Rezervare &Rezervare);
 
-    void reducere() {
-        if (client.getVarsta() <= 12) {
-            float p = film.getPret() - film.getPret() * 25 / 100;
-            pret = p;
-        }
-    }
+    void reducere();
 
-    void ochelari3D() {
-        if (film.getTehnologie() == "3D") {
-            float p = film.getPret() + 5;
-            pret = p;
-        } else pret = film.getPret();
-    }
+    void ochelari3D();
 
-    float getPret() {
-        return pret;
-    }
+    int getNumarLoc() const;
 
-    void setPret(int pret0) {
-        pret = pret0;
-    }
+    void setNumarLoc(int numarLoc);
 
-    int getNumar_loc() {
-        return numar_loc;
-    }
+    int getNumarRand() const;
 
-    void setNumar_loc(int numar_loc0) {
-        numar_loc = numar_loc0;
-    }
+    void setNumarRand(int numarRand);
 
-    int getNumar_rand() {
-        return numar_rand;
-    }
+    float getPret() const;
 
-    void setNumar_rand(int numar_rand0) {
-        numar_rand = numar_rand0;
-    }
+    void setPret(float pret);
+
+    const Client &getClient() const;
+
+    void setClient(const Client &client);
+
+    const Film &getFilm() const;
+
+    void setFilm(const Film &film);
 };
 #endif //OOP_REZERVARE_H

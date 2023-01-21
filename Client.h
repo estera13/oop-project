@@ -11,53 +11,28 @@ class Client {
 
 public:
 
-    Client(const std::string &nume, const std::string &prenume, int varsta) : nume(nume), prenume(prenume),
-                                                                                      varsta(varsta) {
+    Client(const std::string &nume, const std::string &prenume, int varsta);
 
-        if (varsta < 0) throw eroare_varsta();
-    }
 
-    Client(const Client &copie) : nume(copie.nume), prenume(copie.prenume) {
-        varsta = copie.varsta;
-    }
+    Client(const Client &copie);
 
-    Client &operator=(const Client &other) {
-        nume = other.nume;
-        prenume = other.prenume;
-        varsta = other.varsta;
-        return *this;
-    }
+    Client &operator=(const Client &other);
 
-    friend std::ostream &operator<<(std::ostream &os, const Client &client) {
-        os << "nume: " << client.nume << " prenume: " << client.prenume << " varsta: " << client.varsta << " ani "
-           << "\n";
-        return os;
-    }
+    friend std::ostream &operator<<(std::ostream &os, const Client &client);
 
-    int getVarsta() {
-        return varsta;
-    }
 
-    ~Client() {}
+    virtual ~Client();
 
-    void setVarsta(int varsta0) {
-        varsta = varsta0;
-    }
+    const std::string &getNume() const;
 
-    void setPrenume(const std::string &prenume0) {
-        prenume = prenume0;
-    }
+    void setNume(const std::string &nume);
 
-    const std::string &getPrenume() {
-        return prenume;
-    }
+    const std::string &getPrenume() const;
 
-    void setNume(const std::string &nume0) {
-        nume = nume0;
-    }
+    void setPrenume(const std::string &prenume);
 
-    const std::string &getNume() {
-        return nume;
-    }
+    int getVarsta() const;
+
+    void setVarsta(int varsta);
 };
 #endif //OOP_CLIENT_H

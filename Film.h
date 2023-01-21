@@ -15,86 +15,45 @@ class Film {
 public:
 
     Film(const std::string &nume, const std::string &gen, const std::string &ora, int durata, float pret,
-               const std::string &tehnologie, int pegi) : nume(nume), gen(gen), ora(ora), durata(durata), pret(pret),
-                                                          tehnologie(tehnologie), pegi(pegi) {}
+               const std::string &tehnologie, int pegi);
 
-    Film(const Film &copie) :nume(copie.nume), gen(copie.gen), ora(copie.ora), tehnologie(copie.tehnologie) {
-        durata = copie.durata;
-        pret = copie.pret;
-        pegi = copie.pegi;
-    }
+    Film(const Film &copie);
 
-    Film &operator=(const Film &other) {
-        nume = other.nume;
-        gen = other.gen;
-        ora = other.ora;
-        durata = other.durata;
-        pret = other.pret;
-        tehnologie = other.tehnologie;
-        pegi = other.pegi;
-        return *this;
-    }
+    virtual void afisare(std::ostream& os) const;
 
-    ~Film() {}
+    Film &operator=(const Film &other);
 
-    friend std::ostream &operator<<(std::ostream &os, const Film &film) {
-        os << " nume: " << film.nume << " gen: " << film.gen << " ora: " << film.ora << " durata: " << film.durata
-           << " minute" << " pret: " << film.pret << " lei " << "tehnologie: " << film.tehnologie << " PEGI: "
-           << film.pegi << "\n";
-        return os;
-    }
+    virtual ~Film();
 
-    const std::string &getNume() {
-        return nume;
-    }
+    friend std::ostream &operator<<(std::ostream &os, const Film &film);
 
-    void setNume(const std::string &nume0) {
-        nume = nume0;
-    }
+    const std::string &getNume() const;
 
-    const std::string &getGen() {
-        return gen;
-    }
+    void setNume(const std::string &nume);
 
-    void setGen(const std::string &gen0) {
-        gen = gen0;
-    }
+    const std::string &getGen() const;
 
-    const std::string &getOra() {
-        return ora;
-    }
+    void setGen(const std::string &gen);
 
-    void setOra(const std::string &ora0) {
-        ora = ora0;
-    }
+    const std::string &getOra() const;
 
-    int getDurata() {
-        return durata;
-    }
+    void setOra(const std::string &ora);
 
-    void setDurata(int durata0) {
-        durata = durata0;
-    }
+    int getDurata() const;
 
-    float getPret() {
-        return pret;
-    }
+    void setDurata(int durata);
 
-    void setPret(int pret0) {
-        pret = pret0;
-    }
+    float getPret() const;
 
-    const std::string &getTehnologie() {
-        return tehnologie;
-    }
+    void setPret(float pret);
 
-    int getPegi() {
-        return pegi;
-    }
+    const std::string &getTehnologie() const;
 
-    void setPegi(int pegi0) {
-        pegi = pegi0;
-    }
+    void setTehnologie(const std::string &tehnologie);
+
+    int getPegi() const;
+
+    void setPegi(int pegi);
 };
 
 #endif //OOP_FILM_H

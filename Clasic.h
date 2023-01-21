@@ -5,12 +5,17 @@
 #include <string>
 #include "Film.h"
 
-class Clasic : Film{
+class Clasic : public Film{
     protected: int an;
 public:
     Clasic(const std::string &nume, const std::string &gen, const std::string &ora, int durata, float pret,
-           const std::string &tehnologie, int pegi, int an) : Film(nume, gen, ora, durata, pret,tehnologie, pegi), an(an) {}
-    ~Clasic() {}
+           const std::string &tehnologie, int pegi, int an);
+    ~Clasic();
+     void afisare(std::ostream& os) const;
+
+    Clasic &operator=(const Clasic &other);
+
+    friend std::ostream &operator<<(std::ostream &os, const Clasic &clasic);
 };
 
 
