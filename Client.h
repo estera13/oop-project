@@ -25,14 +25,14 @@ public:
 
     const std::string &getNume() const;
 
-    void setNume(const std::string &nume);
+    void setNume(const std::string &Nume);
 
     const std::string &getPrenume() const;
 
-    void setPrenume(const std::string &prenume);
+    void setPrenume(const std::string &Prenume);
 
     int getVarsta() const;
 
-    void setVarsta(int varsta);
+    void setVarsta(int Varsta);
 };
 #endif //OOP_CLIENT_H
