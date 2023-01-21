@@ -41,14 +41,14 @@ public:
 
     float getPret() const;
 
-    void setPret(float pret);
+    void setPret(float Pret);
 
     const Client &getClient() const;
 
-    void setClient(const Client &client);
+    void setClient(const Client &Client);
 
     const Film &getFilm() const;
 
-    void setFilm(const Film &film);
+    void setFilm(const Film &Film);
 };
 #endif //OOP_REZERVARE_H
