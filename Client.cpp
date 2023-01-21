@@ -45,11 +45,8 @@ std::ostream &operator<<(std::ostream &os, const Client &client) {
 Client::~Client() {}
 
 
-
 int Client::getVarsta() const {
     return varsta;
 }
 
-void Client::setVarsta(int Varsta) {
-    this->varsta = Varsta;
-}
+
