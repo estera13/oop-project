@@ -11,7 +11,7 @@ public:
     Clasic(const std::string &nume, const std::string &gen, const std::string &ora, int durata, float pret,
            const std::string &tehnologie, int pegi, int an);
     ~Clasic();
-     void afisare(std::ostream& os) const;
+     void afisare(std::ostream& os) const override;
 
     Clasic &operator=(const Clasic &other);
 
