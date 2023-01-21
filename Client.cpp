@@ -49,22 +49,22 @@ const std::string &Client::getNume() const {
     return nume;
 }
 
-void Client::setNume(const std::string &nume) {
-    this->nume = nume;
+void Client::setNume(const std::string &Nume) {
+    this->nume = Nume;
 }
 
 const std::string &Client::getPrenume() const {
     return prenume;
 }
 
-void Client::setPrenume(const std::string &prenume) {
-    this->prenume = prenume;
+void Client::setPrenume(const std::string &Prenume) {
+    this->prenume = Prenume;
 }
 
 int Client::getVarsta() const {
     return varsta;
 }
 
-void Client::setVarsta(int varsta) {
-    this->varsta = varsta;
+void Client::setVarsta(int Varsta) {
+    this->varsta = Varsta;
 }
