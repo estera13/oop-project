@@ -7,7 +7,6 @@
 #include "Horror.h"
 #include "Comedie.h"
 #include "Clasic.h"
-#include "Cinema.h"
 #include<vector>
 #include<string>
 
