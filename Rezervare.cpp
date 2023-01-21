@@ -51,6 +51,3 @@ float Rezervare::getPret() const {
     return pret;
 }
 
-void Rezervare::setPret(float Pret) {
-    this->pret = Pret;
-}
