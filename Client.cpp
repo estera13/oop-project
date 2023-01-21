@@ -45,11 +45,11 @@ std::ostream &operator<<(std::ostream &os, const Client &client) {
 Client::~Client() {}
 
 
-const std::string &Client::getNume() const {
-    return nume;
+
+int Client::getVarsta() const {
+    return varsta;
 }
 
-void Client::setNume(const std::string &Nume) {
-    this->nume = Nume;
+void Client::setVarsta(int Varsta) {
+    this->varsta = Varsta;
 }
-
