@@ -3,7 +3,7 @@
 #include "Exceptii.h"
 
 
-Rezervare::Rezervare(int &numar_loc, int &numar_rand, float pret, Client client, Film film) : numar_loc(numar_loc),
+Rezervare::Rezervare(int &numar_loc, int &numar_rand, float pret, const Client &client,const Film &film) : numar_loc(numar_loc),
                                                                                               numar_rand(
                                                                                                       numar_rand),
                                                                                               pret(pret),
