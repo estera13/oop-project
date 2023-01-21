@@ -36,11 +36,26 @@ std::ostream &operator<<(std::ostream &os, const Film &film) {
     return os;
 }
 
-const std::string &Film::getNume() const {
-    return nume;
+float Film::getPret() const {
+    return pret;
 }
 
-void Film::setNume(const std::string &Nume) {
-    this->nume = Nume;
+void Film::setPret(float Pret) {
+    this->pret = Pret;
 }
 
+const std::string &Film::getTehnologie() const {
+    return tehnologie;
+}
+
+void Film::setTehnologie(const std::string &Tehnologie) {
+    this->tehnologie = Tehnologie;
+}
+
+int Film::getPegi() const {
+    return pegi;
+}
+
+void Film::setPegi(int Pegi) {
+    this->pegi = Pegi;
+}
