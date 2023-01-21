@@ -29,31 +29,31 @@ public:
 
     const std::string &getNume() const;
 
-    void setNume(const std::string &nume);
+    void setNume(const std::string &Nume);
 
     const std::string &getGen() const;
 
-    void setGen(const std::string &gen);
+    void setGen(const std::string &Gen);
 
     const std::string &getOra() const;
 
-    void setOra(const std::string &ora);
+    void setOra(const std::string &Ora);
 
     int getDurata() const;
 
-    void setDurata(int durata);
+    void setDurata(int Durata);
 
     float getPret() const;
 
-    void setPret(float pret);
+    void setPret(float Pret);
 
     const std::string &getTehnologie() const;
 
-    void setTehnologie(const std::string &tehnologie);
+    void setTehnologie(const std::string &Tehnologie);
 
     int getPegi() const;
 
-    void setPegi(int pegi);
+    void setPegi(int Pegi);
 };
 
 #endif //OOP_FILM_H
