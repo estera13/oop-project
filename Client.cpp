@@ -53,18 +53,3 @@ void Client::setNume(const std::string &Nume) {
     this->nume = Nume;
 }
 
-const std::string &Client::getPrenume() const {
-    return prenume;
-}
-
-void Client::setPrenume(const std::string &Prenume) {
-    this->prenume = Prenume;
-}
-
-int Client::getVarsta() const {
-    return varsta;
-}
-
-void Client::setVarsta(int Varsta) {
-    this->varsta = Varsta;
-}
