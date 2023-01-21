@@ -50,6 +50,3 @@ int Film::getPegi() const {
     return pegi;
 }
 
-void Film::setPegi(int Pegi) {
-    this->pegi = Pegi;
-}
