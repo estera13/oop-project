@@ -67,22 +67,22 @@ float Rezervare::getPret() const {
     return pret;
 }
 
-void Rezervare::setPret(float pret) {
-    this->pret = pret;
+void Rezervare::setPret(float Pret) {
+    this->pret = Pret;
 }
 
 const Client &Rezervare::getClient() const {
     return client;
 }
 
-void Rezervare::setClient(const Client &client) {
-    this->client = client;
+void Rezervare::setClient(const Client &Client) {
+    this->client = Client;
 }
 
 const Film &Rezervare::getFilm() const {
     return film;
 }
 
-void Rezervare::setFilm(const Film &film) {
-    this->film = film;
+void Rezervare::setFilm(const Film &Film) {
+    this->film = Film;
 }
