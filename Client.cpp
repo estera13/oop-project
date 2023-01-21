@@ -50,7 +50,7 @@ const std::string &Client::getNume() const {
 }
 
 void Client::setNume(const std::string &nume) {
-    Client::nume = nume;
+    this->nume = nume;
 }
 
 const std::string &Client::getPrenume() const {
@@ -58,7 +58,7 @@ const std::string &Client::getPrenume() const {
 }
 
 void Client::setPrenume(const std::string &prenume) {
-    Client::prenume = prenume;
+    this->prenume = prenume;
 }
 
 int Client::getVarsta() const {
@@ -66,5 +66,5 @@ int Client::getVarsta() const {
 }
 
 void Client::setVarsta(int varsta) {
-    Client::varsta = varsta;
+    this->varsta = varsta;
 }
