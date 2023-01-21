@@ -10,7 +10,7 @@ public:
     Horror(const std::string &nume, const std::string &gen, const std::string &ora, int durata, float pret,
          const std::string &tehnologie, int pegi, const std::string &regizor) : Film(nume, gen, ora, durata, pret,tehnologie, pegi), regizor(regizor) {}
     ~Horror() {}
-    void afisare(std::ostream& os) const
+    void afisare(std::ostream& os) const override
     {
         Film::afisare(os);
         os<<regizor<<'\n';
