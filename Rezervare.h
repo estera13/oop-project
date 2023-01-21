@@ -19,7 +19,7 @@ class Rezervare {
 
 public:
 
-    Rezervare(int &numar_loc, int &numar_rand, float pret, Client client, Film film);
+    Rezervare(int &numar_loc, int &numar_rand, float pret, const Client &client, const Film &film);
 
     Rezervare &operator=(const Rezervare &other);
 
