@@ -47,42 +47,4 @@ void Rezervare::ochelari3D() {
 }
 
 
-int Rezervare::getNumarLoc() const {
-    return numar_loc;
-}
 
-void Rezervare::setNumarLoc(int numarLoc) {
-    numar_loc = numarLoc;
-}
-
-int Rezervare::getNumarRand() const {
-    return numar_rand;
-}
-
-void Rezervare::setNumarRand(int numarRand) {
-    numar_rand = numarRand;
-}
-
-float Rezervare::getPret() const {
-    return pret;
-}
-
-void Rezervare::setPret(float Pret) {
-    this->pret = Pret;
-}
-
-const Client &Rezervare::getClient() const {
-    return client;
-}
-
-void Rezervare::setClient(const Client &Client) {
-    this->client = Client;
-}
-
-const Film &Rezervare::getFilm() const {
-    return film;
-}
-
-void Rezervare::setFilm(const Film &Film) {
-    this->film = Film;
-}
