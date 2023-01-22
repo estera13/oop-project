@@ -5,7 +5,7 @@
 int Rezervare::id_max=0;
 float Rezervare::pret_ochelari=5;
 
-Rezervare::Rezervare(const int id, int &numar_loc, int &numar_rand, float pret, const Client &client,const Film &film) : id(id), numar_loc(numar_loc),
+Rezervare::Rezervare(int &numar_loc, int &numar_rand, float pret, const Client &client,const Film &film) : numar_loc(numar_loc),
                                                                                               numar_rand(
                                                                                                       numar_rand),
                                                                                               pret(pret),
