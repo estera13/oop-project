@@ -8,7 +8,7 @@ Clasic::~Clasic() {}
 
 void Clasic::afisare(std::ostream &os) const {
     Film::afisare(os);
-    os<<an<<'\n';
+    os<<"an: "<<an<<'\n';
 }
 
 Clasic &Clasic::operator=(const Clasic &other) {
@@ -23,3 +23,6 @@ std::ostream &operator<<(std::ostream &os, const Clasic &clasic) {
     clasic.afisare(os);
     return os;
 }
+
+std::shared_ptr<Film>Clasic:: clone() const {
+    return std::make_shared<Clasic>(*this); }

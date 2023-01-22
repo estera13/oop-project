@@ -19,6 +19,8 @@ public:
     Comedie &operator=(const Comedie &other);
 
     friend std::ostream &operator<<(std::ostream &os, const Comedie &comedie);
+
+    std::shared_ptr<Film> clone() const override;
 };
 
 

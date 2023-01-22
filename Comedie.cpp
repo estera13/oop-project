@@ -24,3 +24,5 @@ std::ostream &operator<<(std::ostream &os, const Comedie &comedie) {
     comedie.afisare(os);
     return os;
 }
+std::shared_ptr<Film>Comedie:: clone() const {
+    return std::make_shared<Comedie>(*this); }

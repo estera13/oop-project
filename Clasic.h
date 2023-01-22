@@ -6,7 +6,7 @@
 #include "Film.h"
 
 class Clasic : public Film{
-    protected: int an;
+    int an;
 public:
     Clasic(const std::string &nume, const std::string &gen, const std::string &ora, int durata, float pret,
            const std::string &tehnologie, int pegi, int an);
@@ -16,6 +16,8 @@ public:
     Clasic &operator=(const Clasic &other);
 
     friend std::ostream &operator<<(std::ostream &os, const Clasic &clasic);
+
+    std::shared_ptr<Film> clone() const override;
 };
 
 

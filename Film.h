@@ -3,6 +3,7 @@
 #define OOP_FILM_H
 
 #include <ostream>
+#include <memory>
 
 class Film {
     std::string nume;
@@ -27,33 +28,17 @@ public:
 
     friend std::ostream &operator<<(std::ostream &os, const Film &film);
 
-    const std::string &getNume() const;
+    virtual std::shared_ptr<Film> clone() const = 0;
 
-    void setNume(const std::string &Nume);
-
-    const std::string &getGen() const;
-
-    void setGen(const std::string &Gen);
-
-    const std::string &getOra() const;
-
-    void setOra(const std::string &Ora);
-
-    int getDurata() const;
-
-    void setDurata(int Durata);
 
     float getPret() const;
 
-    void setPret(float Pret);
 
     const std::string &getTehnologie() const;
 
-    void setTehnologie(const std::string &Tehnologie);
 
     int getPegi() const;
 
-    void setPegi(int Pegi);
 };
 
 #endif //OOP_FILM_H

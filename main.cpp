@@ -77,7 +77,7 @@ int main()
             try{
                 int random = 1+ (rand() % 200);
                 int random1 = 1+ (rand() % 10);
-                Rezervare Bilet(random, random1,0,clienti[cnt],*filme[i]);
+                Rezervare Bilet(random, random1,0,clienti[cnt],filme[i]);
                 Bilet.ochelari3D();
                 Bilet.reducere();
                 std::cout<<Bilet;
