@@ -46,6 +46,7 @@ int main()
     std::cout<<"Bun venit la cinema! Pentru a efectua o rezervare apasati tasta 1 \n";
     while(std::cin>>x && (x==1))
     {
+        int id=0;
         std::string prenume;
         std::cout<<"Introduceti prenumele: \n";
         std::cin>>prenume;
@@ -74,9 +75,10 @@ int main()
                 std::cout<<*film;}
             std::cin>>i;
             try{
+                id++;
                 int random = 1+ (rand() % 200);
                 int random1 = 1+ (rand() % 10);
-                Rezervare Bilet(random, random1,0,clienti[cnt],*filme[i]);
+                Rezervare Bilet(id,random, random1,0,clienti[cnt],*filme[i]);
                 Bilet.ochelari3D();
                 Bilet.reducere();
                 std::cout<<Bilet;
@@ -96,4 +98,5 @@ int main()
 
     return 0;
 }
+
 
