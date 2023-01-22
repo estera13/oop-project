@@ -2,8 +2,10 @@
 #include "Rezervare.h"
 #include "Exceptii.h"
 
+int Rezervare::id_max=0;
+float Rezervare::pret_ochelari=5;
 
-Rezervare::Rezervare(int &numar_loc, int &numar_rand, float pret, const Client &client,const Film &film) : numar_loc(numar_loc),
+Rezervare::Rezervare(const int id, int &numar_loc, int &numar_rand, float pret, const Client &client,const Film &film) : id(id), numar_loc(numar_loc),
                                                                                               numar_rand(
                                                                                                       numar_rand),
                                                                                               pret(pret),
@@ -12,6 +14,7 @@ Rezervare::Rezervare(int &numar_loc, int &numar_rand, float pret, const Client &
     if (film.getPegi() == 18 && client.getVarsta() < film.getPegi()) {
         throw (eroare_varstaPegi());
     }
+    id_max++;
 }
 
 Rezervare &Rezervare::operator=(const Rezervare &other) {
@@ -41,7 +44,7 @@ void Rezervare::reducere() {
 
 void Rezervare::ochelari3D() {
     if (film.getTehnologie() == "3D") {
-        float p = film.getPret() + 5;
+        float p = film.getPret() + pret_ochelari;
         pret = p;
     } else pret = film.getPret();
 }
