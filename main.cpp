@@ -7,6 +7,7 @@
 #include "Horror.h"
 #include "Comedie.h"
 #include "Clasic.h"
+#include "Animatie.h"
 #include<vector>
 #include<string>
 
@@ -26,7 +27,11 @@ int main()
     Clasic cl2("Roman Holiday","Clasic","22:00",127,22.00,"2D",12,1953);
     Clasic cl3("Gone with the Wind","Clasic","13:00",97,22.00,"3D",3,1939);
     Clasic cl4("Casablanca","Clasic","17:00",96,22.00,"2D",13,1942);
-    auto f = {c1.clone(), c2.clone(),c3.clone(),c4.clone(),h1.clone(),h2.clone(),h3.clone(), h4.clone(), cl1.clone(),cl2.clone(),cl3.clone(),cl4.clone()};
+    Animatie a1("Abominable","Animatie","13:00",97,22.00,"3D",3,"DreamWorks" );
+    Animatie a2("Coraline","Animatie","17:00",96,22.00,"2D",3,"Laika");
+    Animatie a3("Frankenweenie","Animatie","13:00",97,22.00,"3D",3,"Laika");
+    Animatie a4("Moana","Animatie","17:00",96,22.00,"2D",3,"Disney");
+    auto f = {c1.clone(), c2.clone(),c3.clone(),c4.clone(),h1.clone(),h2.clone(),h3.clone(), h4.clone(), cl1.clone(),cl2.clone(),cl3.clone(),cl4.clone(),a1.clone(),a2.clone(),a3.clone(),a4.clone()};
     std::vector<Film*> filme;
     filme.push_back(&c1);
     filme.push_back(&c2);
@@ -40,6 +45,10 @@ int main()
     filme.push_back(&cl2);
     filme.push_back(&cl3);
     filme.push_back(&cl4);
+    filme.push_back(&a1);
+    filme.push_back(&a2);
+    filme.push_back(&a3);
+    filme.push_back(&a4);
     for( const auto &film: f)
          std::cout << *film<< "\n";
     int cnt=-1;
@@ -72,6 +81,9 @@ int main()
                     i++;}
                 else if(dynamic_cast<Clasic*>(film) != nullptr)
                 { std::cout<<"Clasic:";
+                    i++;}
+                else if(dynamic_cast<Animatie*>(film) != nullptr)
+                { std::cout<<"Animatie:";
                     i++;}
                 std::cout<<*film;}
             std::cin>>i;
