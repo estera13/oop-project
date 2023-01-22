@@ -14,32 +14,32 @@ int main()
 {
     std::vector<Client> clienti;
 
-    Comedie film1("The Mask","Comedie","15:00",101,22.00,"2D",13,"Jim Carrey");
-    Comedie film2("Ace Ventura: Pet Detective","Comedie","10:15",86,22.00,"2D",13,"Jim Carrey");
-    Comedie film3("Zoolander","Comedie","9:00",103,22.00,"2D",8,"Ben Stiller");
-    Comedie film4("Night at the Museum","Comedie","21:00",108,22.00,"3D",3,"Ben Stiller");
-    Horror film5("The Conjuring","Horror","19:15",132,22.00,"3D",18,"James Wan");
-    Horror film6("Insidious","Horror","23:00",127,22.00,"2D",18,"James Wan");
-    Horror film7("Annabelle 2","Horror","21:00",97,22.00,"3D",18,"James Wan");
-    Horror film8("Midsommar","Horror","22:00",96,22.00,"2D",18,"Ari Aster");
-    Clasic film9("Breakfast at Tiffany's","Clasic","19:15",132,22.00,"3D",12,1961);
-    Clasic film10("Roman Holiday","Clasic","22:00",127,22.00,"2D",12,1953);
-    Clasic film11("Gone with the Wind","Clasic","13:00",97,22.00,"3D",3,1939);
-    Clasic film12("Casablanca","Clasic","17:00",96,22.00,"2D",13,1942);
-
+    Comedie c1("The Mask","Comedie","15:00",101,22.00,"2D",13,"Jim Carrey");
+    Comedie c2("Ace Ventura: Pet Detective","Comedie","10:15",86,22.00,"2D",13,"Jim Carrey");
+    Comedie c3("Zoolander","Comedie","9:00",103,22.00,"2D",8,"Ben Stiller");
+    Comedie c4("Night at the Museum","Comedie","21:00",108,22.00,"3D",3,"Ben Stiller");
+    Horror h1("The Conjuring","Horror","19:15",132,22.00,"3D",18,"James Wan");
+    Horror h2("Insidious","Horror","23:00",127,22.00,"2D",18,"James Wan");
+    Horror h3("Annabelle 2","Horror","21:00",97,22.00,"3D",18,"James Wan");
+    Horror h4("Midsommar","Horror","22:00",96,22.00,"2D",18,"Ari Aster");
+    Clasic cl1("Breakfast at Tiffany's","Clasic","19:15",132,22.00,"3D",12,1961);
+    Clasic cl2("Roman Holiday","Clasic","22:00",127,22.00,"2D",12,1953);
+    Clasic cl3("Gone with the Wind","Clasic","13:00",97,22.00,"3D",3,1939);
+    Clasic cl4("Casablanca","Clasic","17:00",96,22.00,"2D",13,1942);
+    auto film = {c1.clone(), c2.clone(),c3.clone(),c4.clone(),h1.clone(),h2.clone(),h3.clone(), h4.clone(), cl1.clone(),cl2.clone(),cl3.clone(),cl4.clone()};
     std::vector<Film*> filme;
-    filme.push_back(&film1);
-    filme.push_back(&film2);
-    filme.push_back(&film3);
-    filme.push_back(&film4);
-    filme.push_back(&film5);
-    filme.push_back(&film6);
-    filme.push_back(&film7);
-    filme.push_back(&film8);
-    filme.push_back(&film9);
-    filme.push_back(&film10);
-    filme.push_back(&film11);
-    filme.push_back(&film12);
+    filme.push_back(&c1);
+    filme.push_back(&c2);
+    filme.push_back(&c3);
+    filme.push_back(&c4);
+    filme.push_back(&h1);
+    filme.push_back(&h2);
+    filme.push_back(&h3);
+    filme.push_back(&h4);
+    filme.push_back(&cl1);
+    filme.push_back(&cl2);
+    filme.push_back(&cl3);
+    filme.push_back(&cl4);
 
     int cnt=-1;
     int x;
@@ -97,5 +97,4 @@ int main()
 
     return 0;
 }
-
 
