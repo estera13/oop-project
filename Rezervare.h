@@ -11,7 +11,6 @@
 #include "Exceptii.h"
 
 class Rezervare {
-    const int id;
     int numar_loc;
     int numar_rand;
     float pret;
@@ -21,7 +20,7 @@ class Rezervare {
     static float pret_ochelari;
 public:
 
-    Rezervare(const int id, int &numar_loc, int &numar_rand, float pret, const Client &client, const Film &film);
+    Rezervare(int &numar_loc, int &numar_rand, float pret, const Client &client, const Film &film);
 
     Rezervare &operator=(const Rezervare &other);
 
