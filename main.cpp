@@ -46,7 +46,7 @@ int main()
     std::cout<<"Bun venit la cinema! Pentru a efectua o rezervare apasati tasta 1 \n";
     while(std::cin>>x && (x==1))
     {
-        int id=0;
+        
         std::string prenume;
         std::cout<<"Introduceti prenumele: \n";
         std::cin>>prenume;
@@ -57,6 +57,7 @@ int main()
         int varsta;
         std::cin>>varsta;
         try {clienti.push_back(Client(nume, prenume ,varsta));
+            int id=0;
             cnt++;
             std::cout<<"Alegeti un film: \n";
             unsigned long int i=0;
