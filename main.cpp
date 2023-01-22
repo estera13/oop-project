@@ -56,8 +56,8 @@ int main()
         std::cout<<"Introduceti varsta: \n";
         int varsta;
         std::cin>>varsta;
+        int id=0;
         try {clienti.push_back(Client(nume, prenume ,varsta));
-            int id=0;
             cnt++;
             std::cout<<"Alegeti un film: \n";
             unsigned long int i=0;
