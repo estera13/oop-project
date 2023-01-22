@@ -56,7 +56,6 @@ int main()
         std::cout<<"Introduceti varsta: \n";
         int varsta;
         std::cin>>varsta;
-        int id=0;
         try {clienti.push_back(Client(nume, prenume ,varsta));
             cnt++;
             std::cout<<"Alegeti un film: \n";
@@ -76,10 +75,9 @@ int main()
                 std::cout<<*film;}
             std::cin>>i;
             try{
-                id++;
                 int random = 1+ (rand() % 200);
                 int random1 = 1+ (rand() % 10);
-                Rezervare Bilet(id,random, random1,0,clienti[cnt],*filme[i]);
+                Rezervare Bilet(random, random1,0,clienti[cnt],*filme[i]);
                 Bilet.ochelari3D();
                 Bilet.reducere();
                 std::cout<<Bilet;
